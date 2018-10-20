@@ -56,19 +56,21 @@ table {
   -moz-box-sizing:border-box;
   box-sizing: border-box;
 }
+/* Improve scrolling behavior of pageBody */
+html,body { min-height:100%; }
 
 body {
   background-color: rgba(226, 246, 255, 1);
 }
 
-html,body { min-height:100%; }
-
+/*Sets colored center column for all content*/
 #pageBody {
   background-color: rgb(249, 251, 252);
   min-height:100%;
   border-radius: 0px 0px 15px 15px;
 }
 
+/* Default Styling for major structures/classes */
 header {
   border-bottom: 2px solid rgb(139, 141, 142);
   padding-bottom: 1em;
@@ -89,7 +91,6 @@ footer {
   text-align: center;
 }
 
-/* Main */
 html {
   color: rgb(24, 62, 122);
   font-family: 'Lato', sans-serif;
@@ -112,6 +113,8 @@ small{
 p{
   margin-top: 1em;
   margin-bottom: 1em;
+  text-align: left;
+  line-height: 1.5em;
 }
 
 a {
@@ -128,7 +131,12 @@ a:link{
   color:rgb(76, 192, 255);
 }
 
-/* Column Group */
+img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Basic 2-Column Group Setup */
 .columnGroup:before,
 .columnGroup:after {
   content: "";
@@ -144,12 +152,12 @@ a:link{
   *zoom:1;
 }
 
-.genericLeftFloat {
+.genericLargeLeftFloat {
   float: left;
   width: 65%;
 }
 
-.genericRightFloat {
+.genericSmallRightFloat {
   float: right;
   width: 25%;
 }
@@ -158,6 +166,9 @@ a:link{
 .btn{
   border-radius: 5px;
   display: inline-block;
+  transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
   margin:0;
 }
 
@@ -166,7 +177,9 @@ a:link{
   padding: 8px 10px;
 }
 .btn:hover{
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(211,211,211);
+  transform: scale(1.15);
+  cursor:pointer;
 }
 
 .research{
@@ -191,15 +204,7 @@ ul{
   padding-bottom: 1em;
 }
 
-img {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-p {
-  text-align: left;
-  line-height: 1.5em;
-}
+/*Primary Intro Box*/
 #mainIntro{
   margin: 2em auto;
   width: 20%;
