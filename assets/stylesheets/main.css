@@ -115,6 +115,7 @@ p{
   margin-bottom: 1em;
   text-align: left;
   line-height: 1.5em;
+  font-size: 20px;
 }
 
 a {
@@ -204,6 +205,11 @@ ul{
   padding-bottom: 1em;
 }
 
+.genericHead{
+  margin:1em;
+  font-size: 30px;
+}
+/*MAIN PAGE SPECIFIC*/
 /*Primary Intro Box*/
 #mainIntro{
   margin: 2em auto;
@@ -223,12 +229,26 @@ ul{
   font-size:25px;
 }
 
-.genericHead{
-  margin:1em;
-  font-size: 30px;
+
+/*ABOUT PAGE SPECIFIC*/
+
+.about{
+  text-indent:50px;
 }
 
 .social{
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+/*Official linkedin coloring*/
+.linkedin{
+  color:rgb(0, 119, 181);
+  padding: .5em;
+}
+/*Official github coloring*/
+.github{
+  color:rgb(255,255,255);
+  background-color:#333;
+  padding: .5em;
 }
