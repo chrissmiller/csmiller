@@ -170,7 +170,7 @@ a:link{
 }
 
 .research{
-  color: rgb(102, 161, 249);
+  color:rgb(76, 192, 255);
   font-family: 'Ubuntu', sans-serif;
   font-weight: lighter;
 }
@@ -220,4 +220,9 @@ p {
 .genericHead{
   margin:1em;
   font-size: 30px;
+}
+
+.social{
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
