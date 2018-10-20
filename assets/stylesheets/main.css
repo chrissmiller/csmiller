@@ -90,7 +90,14 @@ footer {
 }
 
 /* Main */
+html {
+  color: rgb(24, 62, 122);
+  font-family: 'Lato', serif;
+  font-size: 20px;
+}
+
 h1, h2, h3{
+  color: rgb(102, 161, 249);
   font-size: 20px;
   margin-bottom: 1em;
 }
@@ -100,16 +107,18 @@ p{
   margin-bottom: 1em;
 }
 
-html {
-  color: rgb(24, 62, 122);
-  font-family: 'Lato', serif;
-}
-
 a {
   text-decoration: none;
 }
 a:hover, a:active {
   text-decoration: underline;
+  color:rgb(102, 161, 249);
+}
+a:visited{
+  color:rgb(76, 192, 255);
+}
+a:link{
+  color:rgb(76, 192, 255);
 }
 
 /* Column Group */
@@ -149,6 +158,9 @@ a:hover, a:active {
   border: 2px solid rgb(139, 141, 142);
   padding: 8px 10px;
 }
+.btn:hover{
+  background-color: rgb(211, 211, 211);
+}
 
 /*Lists*/
 ul{
@@ -176,9 +188,10 @@ p {
 
 #mainIntro h1{
   font-size:50px;
-  margin-bottom: 0;
+  margin-bottom: .25em;
 }
 #mainIntro h3{
+  margin-top: 1em;
   font-size:25px;
 }
 
