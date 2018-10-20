@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  text-align: center;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -46,8 +47,22 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-s
+}
+#mainIntro{
+  margin: 2em auto;
+  width: 20%;
+  padding: 1em;
+  border: 3px solid #000000;
+  border-radius: 5px;
+}
 
-h1{
-  color: black;
+#mainIntro h1{
   font-size:30px;
+}
+#mainIntro h3{
+  font-size:20px;
+}
+
+h3 {
+  font-size: 20px;
 }
