@@ -49,7 +49,7 @@ table {
 }
 
 
-/* My work */
+/* CSS by Chris Miller '20 */
 *:before,
 *:after {
   -webkit-box-sizing:border-box;
@@ -118,6 +118,22 @@ p{
   font-size: 20px;
 }
 
+#mainName{
+  color: rgb(102, 161, 249);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.genericHead{
+  margin:1em;
+  font-size: 30px;
+}
+
+.longPara{
+  text-indent:40px;
+}
+
 a {
   text-decoration: none;
 }
@@ -136,6 +152,7 @@ img {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
 
 /* Basic 2-Column Group Setup */
 .columnGroup:before,
@@ -183,12 +200,6 @@ img {
   cursor:pointer;
 }
 
-.research{
-  color:rgb(76, 192, 255);
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: lighter;
-}
-
 i{
   font-size: 20px;
 }
@@ -205,10 +216,7 @@ ul{
   padding-bottom: 1em;
 }
 
-.genericHead{
-  margin:1em;
-  font-size: 30px;
-}
+
 /*MAIN PAGE SPECIFIC*/
 /*Primary Intro Box*/
 #mainIntro{
@@ -232,10 +240,6 @@ ul{
 
 /*ABOUT PAGE SPECIFIC*/
 
-.about{
-  text-indent:50px;
-}
-
 .social{
   padding-bottom: 2em;
   padding-top: 2em;
@@ -251,4 +255,12 @@ ul{
   color:rgb(255,255,255);
   background-color:#333;
   padding: .5em;
+}
+
+/*EXTRACURRICULAR PAGE SPECIFIC*/
+
+.research{
+  color:rgb(76, 192, 255);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
 }
