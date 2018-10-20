@@ -169,12 +169,19 @@ a:link{
   background-color: rgb(211, 211, 211);
 }
 
+.research{
+  color: rgb(102, 161, 249);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+}
+
 i{
   font-size: 20px;
 }
 form{
   display: inline;
 }
+
 
 /*Lists*/
 ul{
