@@ -58,21 +58,26 @@ table {
 }
 
 body {
-  background-color: rgba(179, 192, 198, .8);
+  background-color: rgba(179, 192, 198, 1);
 }
 
+html,body { height:100%; }
+
 #pageBody {
-  background-color: rgba(179, 192, 198, 1);
+  background-color: rgba(226, 246, 255, 1);
+  height:100%;
 }
 
 header {
   border-bottom: 2px solid rgb(139, 141, 142);
   padding-bottom: 1em;
+  padding-top: 1em;
 }
 
 footer {
   border-top: 2px solid rgb(139, 141, 142);
   padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .container {
@@ -91,7 +96,14 @@ h1, h2, h3{
 
 html {
   color: rgb(24, 62, 122);
-  font-family: Cambria, serif;
+  font-family: 'Lato', serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
 }
 
 /* Column Group */
@@ -132,14 +144,26 @@ html {
   padding: 8px 10px;
 }
 
+/*Lists*/
+ul{
+  list-style-type: square;
+  text-align: left;
+  padding-top: .5em;
+  padding-bottom: 1em;
+}
+
 img {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+p {
+  text-align: left;
+}
 #mainIntro{
   margin: 2em auto;
   width: 20%;
-  padding: 1em;
+  padding: 2em;
   border: 3px solid rgb(139, 141, 142);
   border-radius: 5px;
 }
@@ -152,7 +176,7 @@ img {
   font-size:25px;
 }
 
-#abtHead{
+#genericHead{
   margin:1em;
   font-size: 30px;
 }
