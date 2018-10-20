@@ -207,7 +207,8 @@ ul{
 /*Primary Intro Box*/
 #mainIntro{
   margin: 2em auto;
-  width: 20%;
+  max-width: 400px;
+  display:inline-block;
   padding: 2em;
   border: 3px solid rgb(139, 141, 142);
   border-radius: 5px;
