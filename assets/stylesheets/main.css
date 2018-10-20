@@ -58,14 +58,15 @@ table {
 }
 
 body {
-  background-color: rgba(179, 192, 198, 1);
+  background-color: rgba(226, 246, 255, 1);
 }
 
-html,body { height:100%; }
+html,body { min-height:100%; }
 
 #pageBody {
-  background-color: rgba(226, 246, 255, 1);
-  height:100%;
+  background-color: rgb(249, 251, 252);
+  min-height:100%;
+  border-radius: 0px 0px 15px 15px;
 }
 
 header {
@@ -176,7 +177,7 @@ p {
   font-size:25px;
 }
 
-#genericHead{
+.genericHead{
   margin:1em;
   font-size: 30px;
 }
