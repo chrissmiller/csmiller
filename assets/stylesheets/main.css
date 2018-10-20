@@ -23,7 +23,6 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  text-align: center;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -48,21 +47,112 @@ table {
 	border-collapse: collapse;
 	border-s
 }
+
+
+/* My work */
+*:before,
+*:after {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(179, 192, 198, .8);
+}
+
+#pageBody {
+  background-color: rgba(179, 192, 198, 1);
+}
+
+header {
+  border-bottom: 2px solid rgb(139, 141, 142);
+  padding-bottom: 1em;
+}
+
+footer {
+  border-top: 2px solid rgb(139, 141, 142);
+  padding-top: 1em;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Main */
+h1, h2, h3{
+  font-size: 20px;
+  margin-bottom: 1em;
+}
+
+html {
+  color: rgb(24, 62, 122);
+  font-family: Cambria, serif;
+}
+
+/* Column Group */
+.columnGroup:before,
+.columnGroup:after {
+  content: "";
+  display: table;
+}
+
+.columnGroup:after {
+  clear:both;
+}
+
+.columnGroup {
+  clear:both;
+  *zoom:1;
+}
+
+.genericLeftFloat {
+  float: left;
+  width: 70%;
+}
+
+.genericRightFloat {
+  float: right;
+  width: 20%;
+}
+
+/* Buttons */
+.btn{
+  border-radius: 5px;
+  display: inline-block;
+  margin:0;
+}
+
+.btn-alt {
+  border: 2px solid rgb(139, 141, 142);
+  padding: 8px 10px;
+}
+
+img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 #mainIntro{
   margin: 2em auto;
   width: 20%;
   padding: 1em;
-  border: 3px solid #000000;
+  border: 3px solid rgb(139, 141, 142);
   border-radius: 5px;
 }
 
 #mainIntro h1{
-  font-size:30px;
+  font-size:50px;
+  margin-bottom: 0;
 }
 #mainIntro h3{
-  font-size:20px;
+  font-size:25px;
 }
 
-h3 {
-  font-size: 20px;
+#abtHead{
+  margin:1em;
+  font-size: 30px;
 }
