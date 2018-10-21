@@ -32,7 +32,7 @@ function setHTML(response){
 function getDefaultCallURL(){
 	const APIKEY = "6cc0896b2cbd9c679194b07bb6fabfbb";
 	let cityID = 5088597;
-	return `http://api.openweathermap.org/data/2.5/weather?id=${cityID}&appid=${APIKEY}&units=imperial`
+	return `https://api.openweathermap.org/data/2.5/weather?id=${cityID}&appid=${APIKEY}&units=imperial`
 }
 
 //Gets a user location and calls the userCallURL function
@@ -48,7 +48,7 @@ function getUserLocation(){
 //Gets the API call URL for the user's location
 function userCallURL(position){
 	const APIKEY = "6cc0896b2cbd9c679194b07bb6fabfbb";
-	let callURL = `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${APIKEY}&units=imperial`;
+	let callURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${APIKEY}&units=imperial`;
 
 	request.open('GET', callURL, true);
 	request.onload = userCallback;
