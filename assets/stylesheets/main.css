@@ -225,7 +225,7 @@ ul{
   display:inline-block;
   padding: 2em;
   border: 3px solid rgb(139, 141, 142);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #mainIntro h1{
