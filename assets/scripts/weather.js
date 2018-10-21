@@ -62,7 +62,7 @@ function userCallback(){
 
 	if(request.status >= 200 && request.status < 400){
 		let userWeatherData = JSON.parse(this.response);
-		msg = `Temperature in your location: ${userWeatherData.main.temp} °F. `
+		msg = `Temperature in ${userWeatherData.name}: ${userWeatherData.main.temp} °F. `
 		msg += howCold(userWeatherData.main.temp);
 	} else {
 		msg = "Unable to access the weather at your location."

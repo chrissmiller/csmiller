@@ -5,7 +5,8 @@
     <link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <title>Coursework</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Weather</title>
   </head>
   <body>
     <div class="container" id="pageBody">
@@ -24,29 +25,33 @@
         </nav>
       </header>
       <section class="container">
-        <h1 class="genericHead">Coursework</h1>
-        <p>
-
-          Here is a list of my completed courses relevant to my major focus:
-        </p>
-          <ul>
-            <li>ENGS 20, Introduction to Scientific Computing - C, MATLAB (17S)</li>
-            <li>PSYC 40, Introduction to Computational Neuroscience (17F)</li>
-            <li>COSC 10, Problem Solving via Object-Oriented Programming - Java (18W)</li>
-            <li>COSC 11, Foundations of Applied Computer Science - MATLAB (18S)</li>
-            <li>COSC 50, Software Design and Implementation - BASH, C (18X)</li>
-          </ul>
-          <p>
-          I also have a few courses I am currently enrolled in or planning on taking in upcoming terms:
-          </p>
-          <ul>
-            <li>COSC 30, Discrete Mathematics in Computer Science (18F)</li>
-            <li>COSC 74, Machine Learning and Statistical Data Analysis - Python (18F)</li>
-            <li>COSC 76, Artificial Intelligence (19W)</li>
-            <li>COSC 78, Deep Learning (19W)</li>
-          </ul>
-
+        <h1 class="genericHead">Weather and Ski Conditions</h1>
       </section>
+      <div class = "curveBox container" id = "weatherBox">
+        <div id = "locationBox">
+          <h1 id = "locationText">Resort Name</h1>
+        </div>
+
+        <div class = "weatherSubBox" id = "tempBox">
+          <h3 id = "tempText">Temp</h3>
+        </div>
+        <!--
+        <div class = "weatherSubBox" id = "precipBox">
+          <h3 id = "precipText">No Snow</h3>
+        </div>
+        !-->
+
+        <div class = "weatherSubBox" id = "chanceBox">
+          <h3 id = "chanceText">0%</h3>
+        </div>
+
+        <div class = "weatherSubBox" id = "quantityBox">
+          <h3 id = "quantText">0 inches</h3>
+        </div>
+      </div>
+      <script src="../assets/scripts/ski.js"></script>
+      <script>sysGetSnow();</script>
+
       <footer class="container">
         <small>
           Content produced by Chris Miller '20 <br>

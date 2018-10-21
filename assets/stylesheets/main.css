@@ -216,16 +216,20 @@ ul{
   padding-bottom: 1em;
 }
 
-
-/*MAIN PAGE SPECIFIC*/
-/*Primary Intro Box*/
-#mainIntro{
-  margin: 2em auto;
-  max-width: 400px;
+/*Curvy box*/
+.curveBox{
+	margin: 2em auto;
   display:inline-block;
   padding: 2em;
   border: 3px solid rgb(139, 141, 142);
   border-radius: 10px;
+}
+
+
+/*MAIN PAGE SPECIFIC*/
+/*Primary Intro Box*/
+#mainIntro{
+  max-width: 400px;
 }
 
 #mainIntro h1{
@@ -271,4 +275,49 @@ ul{
   color:rgb(76, 192, 255);
   font-family: 'Ubuntu', sans-serif;
   font-weight: lighter;
+}
+
+
+/*WEATHER PAGE SPECIFIC*/
+.weatherSubBox{
+	display: inline-block;
+	border: 3px solid rgb(139, 141, 142);
+	text-align:center;
+	padding:1em;
+	border-style: none solid none none;
+	height:100%;
+}
+
+#weatherBox{
+	max-width: 60%;
+	margin-top: 1em;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+#locationBox{
+	/*display:inline-block;*/
+	border: 3px solid rgb(139, 141, 142);
+	border-style: none none solid none;
+	height:5%;
+	max-width: 100%;
+	margin:0;
+	text-align: center;
+}
+
+#tempBox{
+
+}
+
+#precipBox{
+
+}
+
+#chanceBox{
+
+}
+
+#quantityBox{
+	border-style: none;
 }
