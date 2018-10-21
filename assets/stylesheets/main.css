@@ -245,6 +245,10 @@ ul{
   padding-top: 2em;
 }
 
+#weatherSection{
+	padding-bottom: 1em;
+}
+
 /*Official linkedin coloring*/
 .linkedin{
   color:rgb(0, 119, 181);
