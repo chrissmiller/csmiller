@@ -1,6 +1,6 @@
 /*
 	This program uses the OpenWeatherMap API to access the temperature in Lebanon, and
-	tells the user if it is a good skiing/snowboarding temperature (defined as between -10 and 32 degrees Fahrenheit).
+	tells the user if it is a good skiing/snowboarding temperature (defined as between -10 and 40 degrees Fahrenheit).
 
 	It also allows the user to check the temperature at their own location and provides the same functionality.
 	Sorry for any sloppy styling here - I haven't used JS before but it was fun to learn this bit!
@@ -21,11 +21,8 @@ function setHTML(response){
 	let weatherData = JSON.parse(response);
 	let msg = `Temperature in Lebanon, NH: ${weatherData.main.temp} °F. `;
 	msg += howCold(weatherData.main.temp);
-	let weatherNode = document.createElement('h4');
 	let weatherText = document.createTextNode(msg);
-	weatherNode.id = "weatherNodeLoc";
-	weatherNode.appendChild(weatherText);
-	document.getElementById('weatherSection').appendChild(weatherNode);
+	document.getElementById('weatherNode').appendChild(weatherText);
 }
 
 //Returns the API call URL for Lebanon
@@ -57,7 +54,7 @@ function userCallURL(position){
 
 //Parses user location weather data and amends the weather reporting text to provide it.
 function userCallback(){
-	let weatherNode = document.getElementById("weatherNodeLoc");
+	let weatherNode = document.getElementById("weatherNode");
 	let msg;
 
 	if(request.status >= 200 && request.status < 400){
@@ -68,7 +65,9 @@ function userCallback(){
 		msg = "Unable to access the weather at your location."
 	}
 	let weatherText = document.createTextNode(msg);
-	weatherNode.removeChild(weatherNode.lastChild);
+	if (weatherNode.hasChildNodes()){
+		weatherNode.removeChild(weatherNode.lastChild);
+	}
 	weatherNode.appendChild(weatherText);
 
 	let weatherButton = document.getElementById('weatherButton');
@@ -77,7 +76,7 @@ function userCallback(){
 
 //Reports if it is too cold or too warm for snowboarding
 function howCold(temp){
-	let upperBound = 32;
+	let upperBound = 40;
 	let lowerBound = -10;
 
 	if (temp > upperBound){

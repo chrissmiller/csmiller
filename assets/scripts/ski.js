@@ -41,12 +41,13 @@ function setLoc(name){
   box.innerHTML = name;
 }
 
+
 function setTemp(temp){
   let box = document.getElementById('tempText');
-  box.innerHTML = temp + ' °F.';
+  box.innerHTML = temp + ' °F';
 }
-
-/*function setPrecip(snowChance){
+/*
+function setPrecip(snowChance){
   let box = document.getElementById('precipText');
   if (snowChance > 50){
     box.innerHTML = 'Snow!';
@@ -63,7 +64,9 @@ function setChance(chance){
 function setLvl(snowLvl){
   const cmToIn = .3937;
   let box = document.getElementById('quantText');
-  box.innerHTML = (snowLvl * cmToIn) + ' inches';
+  let inLvl = parseFloat(snowLvl * cmToIn);
+
+  box.innerHTML = inLvl.toFixed(2) + ' inches';
 }
 
 

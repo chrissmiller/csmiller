@@ -306,6 +306,11 @@ ul{
 	text-align: center;
 }
 
+#locationText{
+	font-size:30px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
 #tempBox{
 
 }

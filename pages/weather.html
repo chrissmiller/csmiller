@@ -27,10 +27,21 @@
       <section class="container">
         <h1 class="genericHead">Weather and Ski Conditions</h1>
       </section>
+
+      <section id="weatherSection">
+        <h4 id = "weatherNode"></h4>
+      </section>
+
+      <script src="../assets/scripts/weather.js"></script>
+      <script>sysGetWeather();</script>
+      <button class="btn btn-alt" id = "weatherButton" onclick="getUserLocation()">Get your weather!</button>
+      <br>
+
       <div class = "curveBox container" id = "weatherBox">
         <div id = "locationBox">
           <h1 id = "locationText">Resort Name</h1>
         </div>
+
 
         <div class = "weatherSubBox" id = "tempBox">
           <h3 id = "tempText">Temp</h3>
