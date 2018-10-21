@@ -17,15 +17,15 @@ function buildCallURL(lat, long){
 
 
 function processJSON(jsonData){
-  let data = JSON.parse(jsonData);
-
+  let weather = JSON.parse(jsonData);
+  console.log(jsonData);
   let currDate = new Date();
   let currHour = currDate.getHours();
   let hourIndex = Math.floor(currHour/3);
-  let name = data.data.nearest_area[0].areaName[0].value;
-  let currTemp = data.data.weather[0].hourly[hourIndex].bottom[0].tempF;
-  let snowChance = data.data.weather[0].chanceofsnow;
-  let snowLvl = data.data.weather[0].totalSnowfall_cm;
+  let name = weather.data.nearest_area[0].areaName[0].value;
+  let currTemp = weather.data.weather[0].hourly[hourIndex].bottom[0].tempF;
+  let snowChance = weather.data.weather[0].chanceofsnow;
+  let snowLvl = weather.data.weather[0].totalSnowfall_cm;
 
 
   setLoc(name);

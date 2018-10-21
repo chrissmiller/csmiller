@@ -10,31 +10,17 @@
 "use strict";
 var request = new XMLHttpRequest();
 
-function callback(){
-	if(request.status >= 200 && request.status < 400){
-		setHTML(this.response);
-	}
-}
-
-//Sets HTML for default onload behavior (parses data and assigns to the initial text node)
-function setHTML(response){
-	let weatherData = JSON.parse(response);
-	let msg = `Temperature in Lebanon, NH: ${weatherData.main.temp} °F. `;
-	msg += howCold(weatherData.main.temp);
-	let weatherText = document.createTextNode(msg);
-	document.getElementById('weatherNode').appendChild(weatherText);
-}
-
 //Returns the API call URL for Lebanon
-function getDefaultCallURL(){
+function sysWeatherCheck(){
 	const APIKEY = "6cc0896b2cbd9c679194b07bb6fabfbb";
 	let cityID = 5088597;
-	return `https://api.openweathermap.org/data/2.5/weather?id=${cityID}&appid=${APIKEY}&units=imperial`
+	let callURL = `https://api.openweathermap.org/data/2.5/weather?id=${cityID}&appid=${APIKEY}&units=imperial`;
+	sendRequest(callURL);
 }
 
 //Gets a user location and calls the userCallURL function
 //Sets button to "working" since the call takes a moment
-function getUserLocation(){
+function userWeatherCheck(){
 	let weatherButton = document.getElementById('weatherButton');
 	weatherButton.innerHTML = "Working...";
 	if(navigator.geolocation){
@@ -46,23 +32,21 @@ function getUserLocation(){
 function userCallURL(position){
 	const APIKEY = "6cc0896b2cbd9c679194b07bb6fabfbb";
 	let callURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${APIKEY}&units=imperial`;
-
-	request.open('GET', callURL, true);
-	request.onload = userCallback;
-	request.send();
+	sendRequest(callURL);
 }
 
-//Parses user location weather data and amends the weather reporting text to provide it.
-function userCallback(){
+
+//Parses weather data and amends the weather reporting text to provide it.
+function callback(){
 	let weatherNode = document.getElementById("weatherNode");
 	let msg;
 
 	if(request.status >= 200 && request.status < 400){
-		let userWeatherData = JSON.parse(this.response);
-		msg = `Temperature in ${userWeatherData.name}: ${userWeatherData.main.temp} °F. `
-		msg += howCold(userWeatherData.main.temp);
+		let weatherData = JSON.parse(this.response);
+		msg = `Temperature in ${weatherData.name}: ${weatherData.main.temp} °F. `
+		msg += howCold(weatherData.main.temp);
 	} else {
-		msg = "Unable to access the weather at your location."
+		msg = "Unable to access weather data."
 	}
 	let weatherText = document.createTextNode(msg);
 	if (weatherNode.hasChildNodes()){
@@ -89,8 +73,7 @@ function howCold(temp){
 }
 
 //Calls the default weather checking behavior
-function sysGetWeather(){
-	let callURL = getDefaultCallURL();
+function sendRequest(callURL){
 	request.open('GET', callURL, true);
 	request.onload = callback;
 	request.send();
