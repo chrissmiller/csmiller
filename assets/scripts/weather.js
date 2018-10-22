@@ -37,7 +37,7 @@ function userCallURL(position){
 
 
 //Parses weather data and amends the weather reporting text to provide it.
-function callback(){
+function callbackWeather(){
 	let weatherNode = document.getElementById("weatherNode");
 	let msg;
 
@@ -47,6 +47,7 @@ function callback(){
 		msg += howCold(weatherData.main.temp);
 	} else {
 		msg = "Unable to access weather data."
+		console.log("Weather request error. Request status: " + request.status)
 	}
 	let weatherText = document.createTextNode(msg);
 	if (weatherNode.hasChildNodes()){
@@ -75,6 +76,6 @@ function howCold(temp){
 //Calls the default weather checking behavior
 function sendRequest(callURL){
 	request.open('GET', callURL, true);
-	request.onload = callback;
+	request.onload = callbackWeather;
 	request.send();
 }

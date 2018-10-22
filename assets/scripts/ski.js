@@ -3,7 +3,7 @@
 "use strict";
 var request = new XMLHttpRequest();
 
-function callback(){
+function callbackSki(){
 	if(request.status >= 200 && request.status < 400){
 		processJSON(this.response);
 	}
@@ -18,7 +18,6 @@ function buildCallURL(lat, long){
 
 function processJSON(jsonData){
   let weather = JSON.parse(jsonData);
-  console.log(jsonData);
   let currDate = new Date();
   let currHour = currDate.getHours();
   let hourIndex = Math.floor(currHour/3);
@@ -76,6 +75,6 @@ function sysGetSnow(){
   let long = -72.7798;
 	let callURL = buildCallURL(lat, long);
 	request.open('GET', callURL, true);
-	request.onload = callback;
+	request.onload = callbackSki;
 	request.send();
 }
