@@ -11,7 +11,7 @@ function callbackSki(){
 
 function buildCallURL(lat, long){
   const apiKEY = "843c3aa792814c9fa68211844182110";
-  let url = `http://api.worldweatheronline.com/premium/v1/ski.ashx?key=${apiKEY}&q=${lat},${long}&format=json&includeLocation=yes`;
+  let url = `https://api.worldweatheronline.com/premium/v1/ski.ashx?key=${apiKEY}&q=${lat},${long}&format=json&includeLocation=yes`;
   return url;
 }
 
