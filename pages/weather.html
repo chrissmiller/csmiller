@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container" id="pageBody">
+      <header class="container" id="top">
+        <h1>
+          <a href="../index.html" id="mainName">Chris Miller</a>
+        </h1>
+
+        <!--- Navigation Bar !-->
+        <nav>
+          <a class="btn btn-alt" href="../index.html">Homepage</a>
+          <a class="btn btn-alt" href="about.html">About Me</a>
+          <a class="btn btn-alt" href="courses.html">Coursework</a>
+          <a class="btn btn-alt" href="extra.html">Extracurricular Work</a>
+          <a class="btn btn-alt" href="weather.html">Weather</a>
+        </nav>
+      </header>
+      <section class="container">
+        <h1 class="genericHead">Weather and Ski Conditions</h1>
+      </section>
+
+      <section id="weatherSection">
+        <h4 id = "weatherNode"></h4>
+      </section>
+
+      <script src="../assets/scripts/weather.js"></script>
+      <script>sysWeatherCheck();</script>
+      <button class="btn btn-alt" id = "weatherButton" onclick="userWeatherCheck()">Get your weather!</button>
+      <br>
+
+      <div class = "curveBox container" id = "weatherBox">
+        <div id = "locationBox">
+          <h1 id = "locationText">Resort Name</h1>
+        </div>
+
+
+        <div class = "weatherSubBox" id = "tempBox">
+          <h3 id = "tempText">Temp</h3>
+        </div>
+        <!--
+        <div class = "weatherSubBox" id = "precipBox">
+          <h3 id = "precipText">No Snow</h3>
+        </div>
+        !-->
+
+        <div class = "weatherSubBox" id = "chanceBox">
+          <h3 id = "chanceText">0%</h3>
+        </div>
+
+        <div class = "weatherSubBox" id = "quantityBox">
+          <h3 id = "quantText">0 inches</h3>
+        </div>
+      </div>
+      <script src="../assets/scripts/ski.js"></script>
+      <script>sysGetSnow();</script>
+
+      <footer class="container">
+        <small>
+          Content produced by Chris Miller '20 <br>
+          Questions? <a href="mailto:Chris.20@dartmouth.edu">Email me!</a> <br><br>
+          <a href=#top>Navigate to top</a>
+        </small>
+      </footer>
+    </div>
+  </body>
+</html>
