@@ -46,7 +46,7 @@ function callbackWeather(){
 		msg = `Temperature in ${weatherData.name}: ${weatherData.main.temp} °F. `
 		msg += howCold(weatherData.main.temp);
 	} else {
-		msg = "Unable to access weather data."
+		msg = "Load your weather!"
 		console.log("Weather request error. Request status: " + request.status)
 	}
 	let weatherText = document.createTextNode(msg);
