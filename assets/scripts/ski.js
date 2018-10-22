@@ -71,9 +71,12 @@ function setLvl(snowLvl){
 
 //Calls the default snow checking behavior
 function sysGetSnow(){
-  let lat = 43.6776;
-  let long = -72.7798;
-	let callURL = buildCallURL(lat, long);
+  let skiRes = {
+    lat: 43.6776,
+    long: -72.7798
+  }
+
+	let callURL = buildCallURL(skiRes.lat, skiRes.long);
 	requestSki.open('GET', callURL, true);
 	requestSki.onload = callbackSki;
 	requestSki.send();
