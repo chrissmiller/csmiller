@@ -1,10 +1,10 @@
 
 
 "use strict";
-var request = new XMLHttpRequest();
+var requestSki = new XMLHttpRequest();
 
 function callbackSki(){
-	if(request.status >= 200 && request.status < 400){
+	if(requestSki.status >= 200 && requestSki.status < 400){
 		processJSON(this.response);
 	}
 }
@@ -74,7 +74,7 @@ function sysGetSnow(){
   let lat = 43.6776;
   let long = -72.7798;
 	let callURL = buildCallURL(lat, long);
-	request.open('GET', callURL, true);
-	request.onload = callbackSki;
-	request.send();
+	requestSki.open('GET', callURL, true);
+	requestSki.onload = callbackSki;
+	requestSki.send();
 }
